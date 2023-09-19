@@ -1,0 +1,132 @@
+
+/* CSS BASICO */
+
+:root{
+
+    --fondos:#065B29;
+    --titulos: #008038;
+    --texto: #0FB251;
+}
+
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ESTILOS AL NAV-BAR */
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.nav-bar{
+    background-color: var(--fondos);
+    height: 4rem;
+    text-transform: uppercase;
+}
+
+.nav-bar__header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid white; */
+}
+
+.nav-bar__logo, .nav-bar__burga , .nav-bar__cerrar, .nav-bar__link{
+    color: white;
+    font-size: 1.7rem;
+}
+
+.nav-bar__container{
+    position: absolute;
+    background-color: var(--fondos);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease;
+    
+}
+
+#nav-bar__header:target .nav-bar__container{
+    height: 15rem;
+}
+
+#nav-bar__header:target .open{
+    display: none;
+}
+
+#nav-bar__header:target .close{
+    display: flex;
+}
+
+.close{
+    display: none;
+}
+
+.nav-bar__link{
+    color:white;
+    text-decoration: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS PARA LAS MEDIAS QUERYS */
+@media (min-width:760px){
+
+    .nav-bar{
+        height: 5rem;
+    }
+
+    .nav-bar__burga{
+        display: none;
+    }
+
+    .nav-bar__container{
+        height: auto;
+        flex-direction: row;
+        position: static;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .nav-bar__header{
+        border-bottom: none;
+    }
+
+  
+}
+
+
+@media (min-width:1000px){
+
+}
+
+@media (min-width:1400px){
+
+}
